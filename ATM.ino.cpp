@@ -7,12 +7,12 @@
 const byte filas = 4;
 const byte columnas = 3;
 
-Password password = Password("1234");  //Definimos el Password
+
 int dlugosc = 4;                        //Largo del Password
-int buzzer = 4  ; //Creamos las Variables de salida
+
 
 int ilosc; //Numero de Clicks
-void checkPassword();
+
 
 LiquidCrystal lcd(9, 8, 10, 11, 12, 13); //Definimos los pines del LCD
 char hexakeys[filas][columnas] = {
@@ -87,10 +87,6 @@ void loop() {
  checkPassword();
 
 }  
-          
-
-
-
 
 void checkPassword(){
       char key = keypad.getKey();
@@ -109,12 +105,6 @@ void checkPassword(){
         
 
       }
-        /*else {
-        lcd.setCursor(0,0);
-        lcd.print("<PIN INCORRECTO>");  
-        ilosc = 0;  
-        }
-    */
           
       }
     }
@@ -204,28 +194,6 @@ void checkPassword(){
    lcd.print("Gracias");
 }
 
-
-  
- /* lcd.setCursor(0,0);
-  lcd.print("Ingrese cantidad");
-  lcd.setCursor(0,2);
-  lcd.print("a retirar");
-  delay(1500);
-  lcd.clear();
-  char monto2 = keypad.getKey();
-    if (monto2){
-    monto[pulso] = monto2;
-    lcd.print(monto2);
-    lcd.setCursor(++pulso,2);
-    if (pulso==4){
-      
-      lcd.clear();
-      int montoF = String(monto).toInt();
-      dinero(montoF);
-      
-    }/*else if(ilosc==4){
-      dinero(monto);
-    }*/
 void retiro(){
   lcd.setCursor(0,0);
   lcd.print("Ingrese cantidad");
@@ -260,20 +228,7 @@ void retiro(){
 
 dinero(1800);
 }
-/*if (key=='#'){
-    lcd.clear();
-    monto = leerMonto.toInt();
-    dinero(100);
-          }
-        }*/
-        
-    /*else {
-        num2 = num2 + key;
-        int numLength = num2.length();
-        lcd.setCursor(movimiento+1, 0);
-        lcd.print(num2);
-        final = true;
-    }*/
+
 
 
 
